@@ -19,46 +19,46 @@
 @include-when-export url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --text-color: #acb7c4;
-    --bg-color: #2b2b2b;
+    --text-color: #b0b1ac;
+    --bg-color: #20242f;
     --control-text-color: var(--text-color);
     --meta-content-color: var(--text-color);
     --active-file-border-color: var(--drake-accent);
     --rawblock-edit-panel-bd: var(--code-block-bg-color);
-    --item-hover-bg-color: #222222;
+    --item-hover-bg-color: #151924;
     --active-file-bg-color: var(--item-hover-bg-color);
     --mermaid-theme: night;
 
-    --blur-text-color: rgba(172, 183, 196, 0.5);
+    --blur-text-color: rgba(176, 177, 172, 0.5);
     --md-char-color: #535455;
     --side-bar-bg-color: var(--bg-color);
     --search-select-bg-color: #ffffff;
     --search-select-text-color: var(--bg-color);
     --select-text-bg-color: #3473B068;
-    --window-border: 1px solid #282828;
+    --window-border: 1px solid #1f2430;
 
-    --drake-accent: #3473b0;
-    --drake-highlight: #58a1d6;
+    --drake-accent: #fcc65c;
+    --drake-highlight: #ffcc66;
     --a-color: var(--drake-highlight);
     --variable-color: var(--drake-highlight);
     --outline-active-color: var(--a-color);
     --code-block-bg-color: var(--item-hover-bg-color);
-    --code-block-color: #A9B7C6;
-    --title-color: #bbc9d7;
+    --code-block-color: var(--text-color);
+    --title-color: #cbcdbf;
     --blockquote-border-color: var(--drake-accent);
     --blockquote-color: var(--text-color);
-    --blockquote-bg-color: rgba(52, 115, 176, 0.1);
+    --blockquote-bg-color: rgba(255, 204, 102, 0.05);
     --strong-color: var(--title-color);
     --h2-underline-color: var(--title-color);
     --horizontal-divider-color: var(--title-color);
     --height-light-color: var(--drake-highlight);
     --height-light-border-color: var(--drake-highlight);
-    --yaml-color: #787878;
+    --yaml-color: #676773;
     --yaml-bg-color: var(--code-block-bg-color);
     --footnotes-bg-color: var(--item-hover-bg-color);
     --footnotes-highlight: #FFD760;
-    --table-border-color: #383838;
-    --table-header-bg-color: var(--item-hover-bg-color);
+    --table-border-color: #111520;
+    --table-header-bg-color: #1a1e29;
     --table-bg-color: var(--bg-color);
     --table-n2-bg-color: var(--table-header-bg-color);
     --input-bg-color: var(--item-hover-bg-color);
@@ -1082,8 +1082,8 @@ a.ty-link {
 
 /**
     code render
-    Name: IntelliJ IDEA darcula theme
-    From IntelliJ IDEA by JetBrains
+    Name: Ayu
+    From https://github.com/ayu-theme/ayu-colors
  */
 .cm-s-inner.CodeMirror {
     background: none;
@@ -1096,16 +1096,16 @@ a.ty-link {
     color: #6897BB;
 }
 .cm-s-inner span.cm-keyword {
-    color: #CC7832;
+    color: #ffa759;
 }
 .cm-s-inner span.cm-def {
-    color: #FFD760;
+    color: #ffd580;
 }
 .cm-s-inner span.cm-variable {
-    color: #A9B7C6;
+    color: var(--code-block-color);
 }
 .cm-s-inner span.cm-variable-2 {
-    color: #A9B7C6;
+    color: var(--code-block-color);
 }
 .cm-s-inner span.cm-variable-3 {
     color: #9876AA;
@@ -1117,25 +1117,25 @@ a.ty-link {
     color: #FFC66D;
 }
 .cm-s-inner span.cm-operator {
-    color: #A9B7C6;
+    color: var(--code-block-color);
 }
 .cm-s-inner span.cm-string {
-    color: #6A8759;
+    color: #9cc16b;
 }
 .cm-s-inner span.cm-string-2 {
-    color: #6A8759;
+    color: #9cc16b;
 }
 .cm-s-inner span.cm-comment {
-    color: #787878;
+    color: #5c6773;
 }
 .cm-s-inner span.cm-link {
-    color: #CC7832;
+    color: #ffa759;
 }
 .cm-s-inner span.cm-atom {
-    color: #CC7832;
+    color: #ffa759;
 }
 .cm-s-inner span.cm-error {
-    color: #BC3F3C;
+    color: #d1675a;
 }
 .cm-s-inner span.cm-tag {
     color: #E8BF6A;
@@ -1159,12 +1159,12 @@ a.ty-link {
     color: #FF9E59;
 }
 .cm-s-inner span.cm-matchhighlight {
-    color: #FFFFFF;
+    color: var(--code-block-color);
     background-color: rgba(50, 89, 48, .7);
     font-weight: normal;
 }
 .cm-s-inner span.cm-searching {
-    color: #FFFFFF;
+    color: var(--code-block-color);
     background-color: rgba(61, 115, 59, .7);
     font-weight: normal;
 }
@@ -1175,7 +1175,7 @@ a.ty-link {
     background: var(--bg-color);
 }
 .cm-s-inner .CodeMirror-linenumber {
-    color: #787878;
+    color: #5c6773;
 }
 .cm-s-inner .CodeMirror-matchingbracket {
     background-color: #3B514D;

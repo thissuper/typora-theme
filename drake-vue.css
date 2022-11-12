@@ -60,7 +60,7 @@
 }
 
 html {
-    font-size: 12px;
+    font-size: var(--text-size);
 }
 
 body {
@@ -87,19 +87,52 @@ p {
     background-color: var(--code-block-bg-color);
     color: var(--code-block-color);
     border: none;
-    line-height: var(--code-block-line-height);
+    line-height: var(--code-line-height);
 }
 
 /*inline latex*/
 .MathJax {
-  font-size: 120% !important;
+    font-size: 120% !important;
+}
+.MathJax text, .MathJax use {
+    font-family: var(--latex-font);
 }
 /*math-block latex*/
 .md-math-block .MathJax {
-  font-size: 130% !important;
+    font-size: 130% !important;
 }
 
 /*mermaid*/
+[mermaid-type="journey"] line {
+    stroke: #7a7a7a !important;
+}
+[mermaid-type="journey"] .label {
+    color: #333 !important;
+}
+[id^=mermaidChart] .relationshipLabelBox {
+    fill: var(--bg-color) !important;
+    opacity: 1 !important;
+    background-color: var(--bg-color) !important;
+}
+[id^=mermaidChart] .legend {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] g.label {
+    font-size: 1rem !important;
+}
+[id^=mermaidChart] line.divider {
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] span.nodeLabel {
+    color: var(--code-block-color) !important;
+    line-height: 1.8rem;
+}
+tspan {
+    color: var(--text-color)
+}
+[id^=mermaidChart] .entityLabel {
+    fill: var(--code-block-color) !important;
+}
 [id^=mermaidChart] {
     fill: var(--text-color) !important;
 }
@@ -112,7 +145,7 @@ p {
     font-family: var(--text-font) !important;
     font-size: 1rem !important;
 }
-.md-diagram-panel-preview .actor { /*方块*/
+.md-diagram-panel-preview .actor, .md-diagram-panel-preview .entityBox { /*方块*/
     stroke: var(--table-border-color) !important;
     fill: var(--code-block-bg-color) !important;
 }
@@ -181,7 +214,7 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
     fill: var(--code-block-bg-color) !important;
 }
 #write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
-    color: var(--code-block-color) !important;
+    color: var(--code-block-color);
     font-family: var(--text-font) !important;
     font-size: 1rem !important;
 }
@@ -190,6 +223,9 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
 #write code, tt {
     margin: 0 2px;
     color: var(--drake-highlight);
+    background-color: #f8f8f8;
+    padding: 3px 5px;
+    border-radius: 2px;
 }
 
 /*variable*/
@@ -260,16 +296,6 @@ blockquote {
     color: var(--a-color);
     text-decoration: none;
 }
-#write h2 a .md-plain {
-    border-bottom: .2rem solid var(--a-color);
-}
-.on-focus-mode #write a .md-plain, .on-focus-mode .md-htmlblock-container a:hover {
-    border-bottom: .1rem solid var(--blur-text-color);
-}
-#write a .md-plain, .md-htmlblock-container a:hover,
-.on-focus-mode #write .md-focus a .md-plain, .md-focus .md-htmlblock-container a:hover {
-    border-bottom: .1rem solid var(--a-color);
-}
 [md-inline=link] a {
     margin: 0 .2rem;
 }
@@ -334,6 +360,7 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 h2 .md-plain {
     padding-bottom: .3rem;
@@ -481,8 +508,11 @@ ol:last-child {
     margin-bottom: 0;
 }
 
-table {
-    padding: 0;
+.ty-table-edit {
+    margin-top: -1rem !important;
+}
+#write table {
+    margin-top: 1rem;
     word-break: initial;
     background-color: var(--table-bg-color);
 }
@@ -547,7 +577,6 @@ kbd {
     font-size: .95rem;
     padding: .3em .4em;
     border-radius: .4em;
-    vertical-align: top;
     box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
 }
 
@@ -1104,6 +1133,7 @@ a.ty-link {
 }
 .cm-s-inner .CodeMirror-gutters {
     border-right: 1px solid rgba(120, 120, 120, 0.3);
+    background: var(--code-block-bg-color);
 }
 .cm-s-inner .CodeMirror-linenumber {
     color: #787878;

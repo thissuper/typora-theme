@@ -20,12 +20,12 @@
 
 :root {
     --text-color: #acb7c4;
-    --bg-color: #2b2b2b;
+    --bg-color: #282838;
     --control-text-color: var(--text-color);
     --meta-content-color: var(--text-color);
     --active-file-border-color: var(--drake-accent);
     --rawblock-edit-panel-bd: var(--code-block-bg-color);
-    --item-hover-bg-color: #222222;
+    --item-hover-bg-color: #1d1d26;
     --active-file-bg-color: var(--item-hover-bg-color);
     --mermaid-theme: night;
 
@@ -37,28 +37,28 @@
     --select-text-bg-color: #3473B068;
     --window-border: 1px solid #282828;
 
-    --drake-accent: #3473b0;
-    --drake-highlight: #58a1d6;
+    --drake-accent: #904ac2;
+    --drake-highlight: #b160ea;
     --a-color: var(--drake-highlight);
     --variable-color: var(--drake-highlight);
     --outline-active-color: var(--a-color);
     --code-block-bg-color: var(--item-hover-bg-color);
     --code-block-color: #A9B7C6;
-    --title-color: #bbc9d7;
+    --title-color: #bbc6d2;
     --blockquote-border-color: var(--drake-accent);
     --blockquote-color: var(--text-color);
-    --blockquote-bg-color: rgba(52, 115, 176, 0.1);
+    --blockquote-bg-color: rgba(25, 25, 49, 0.53);
     --strong-color: var(--title-color);
     --h2-underline-color: var(--title-color);
     --horizontal-divider-color: var(--title-color);
     --height-light-color: var(--drake-highlight);
     --height-light-border-color: var(--drake-highlight);
-    --yaml-color: #787878;
+    --yaml-color: #676773;
     --yaml-bg-color: var(--code-block-bg-color);
     --footnotes-bg-color: var(--item-hover-bg-color);
     --footnotes-highlight: #FFD760;
-    --table-border-color: #383838;
-    --table-header-bg-color: var(--item-hover-bg-color);
+    --table-border-color: var(--item-hover-bg-color);
+    --table-header-bg-color: #2c2c47;
     --table-bg-color: var(--bg-color);
     --table-n2-bg-color: var(--table-header-bg-color);
     --input-bg-color: var(--item-hover-bg-color);
